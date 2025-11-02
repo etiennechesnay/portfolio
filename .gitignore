@@ -1,0 +1,14 @@
+# MacOS Finder Files
+.DS_Store
+
+# Others
+.git/
+**/node_modules/
+**/story-book-static
+
+.eslintcache
+
+.eslintcache
+**/storybook-static
+**/*.tsbuildinfo
+*.local

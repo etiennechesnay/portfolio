@@ -1,0 +1,20 @@
+{
+  "firstName": "Etienne",
+  "lastName": "Chesnay",
+  "jobTitle": "Ingénieur Front-End Senior",
+  "about": {
+    "title": "À Propos",
+    "description": "Votre contenu à propos ira ici. Décrivez votre expérience, vos compétences et ce qui vous rend unique en tant qu'ingénieur front-end senior."
+  },
+  "projects": {
+    "title": "Projets",
+    "project1": {
+      "title": "Projet 1",
+      "description": "Description du projet"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Intéressé par une collaboration ? Connectons-nous !"
+  }
+}

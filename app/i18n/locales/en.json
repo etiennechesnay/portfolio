@@ -1,0 +1,20 @@
+{
+  "firstName": "Etienne",
+  "lastName": "Chesnay",
+  "jobTitle": "Senior Front-End Engineer",
+  "about": {
+    "title": "About Me",
+    "description": "Your about content will go here. Describe your experience, skills, and what makes you unique as a senior front-end engineer."
+  },
+  "projects": {
+    "title": "Projects",
+    "project1": {
+      "title": "Project 1",
+      "description": "Project description"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Interested in working together? Let's connect!"
+  }
+}
