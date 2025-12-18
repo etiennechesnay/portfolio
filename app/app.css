@@ -1,6 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-bg: #95c2e2;
-  --color-primary-text: #e2d4bb;
+  /* Primary colors */
+  --color-primary-bg: #f4ddcb;
+  --color-primary-text: #2d1810;
+
+  /* Blue shades */
+  --color-blue-wave: #4cc0fb;
+  --color-blue-light: #89c8e1;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1e40af;
+  --color-blue-900: #0f172a;
+
+  /* LinkedIn colors */
+  --color-linkedin: #0077b5;
+  --color-linkedin-hover: #006399;
+
+  /* White variations */
+  --color-white: #ffffff;
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+
+  /* Gray shades */
+  --color-gray-100: #f3f4f6;
 }

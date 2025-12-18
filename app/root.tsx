@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Links,
   Meta,
@@ -6,13 +8,12 @@ import {
   ScrollRestoration,
   useLocation,
 } from "react-router";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 
 import "./app.css";
 import "./i18n/config";
-import { getLocaleFromPathname } from "./i18n/utils";
 import LanguageHandler from "./components/LanguageHandler";
+import { MotionProvider } from "./contexts/MotionContext";
+import { getLocaleFromPathname } from "./i18n/utils";
 
 export default function Root() {
   const location = useLocation();
@@ -34,9 +35,11 @@ export default function Root() {
         <Links />
       </head>
       <body>
-        <LanguageHandler>
-          <Outlet />
-        </LanguageHandler>
+        <MotionProvider>
+          <LanguageHandler>
+            <Outlet />
+          </LanguageHandler>
+        </MotionProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -3,6 +3,7 @@
 
 # Others
 .git/
+**/.claude/
 **/node_modules/
 **/story-book-static
 

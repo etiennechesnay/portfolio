@@ -6,6 +6,28 @@
     "title": "À Propos",
     "description": "Votre contenu à propos ira ici. Décrivez votre expérience, vos compétences et ce qui vous rend unique en tant qu'ingénieur front-end senior."
   },
+  "skills": {
+    "title": "Compétences"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "canalplus": {
+      "title": "CanalPlus",
+      "description": "Au sein du département Interfaces et Expériences de Canal+, je travaille sur le développement front-end des produits OTT."
+    },
+    "canalplusTv": {
+      "title": "CanalPlus sur TV",
+      "description": "Adaptation et déploiement de l'application web Reactjs de myCanal sur de nouveaux appareils : Playstation5, Samsung TV, LG TV et Hisense TV en utilisant les frameworks et SDK propriétaires."
+    },
+    "shadow": {
+      "title": "Shadow",
+      "description": "Au sein de la plateforme Core Business, j'ai travaillé sur le développement front-end des produits Shadow."
+    },
+    "stonal": {
+      "title": "Stonal",
+      "description": "Au sein des équipes front-end, j'ai travaillé sur le développement front-end des produits Stonal. J'ai analysé, conçu et développé des fonctionnalités innovantes."
+    }
+  },
   "projects": {
     "title": "Projets",
     "project1": {
@@ -14,7 +36,22 @@
     }
   },
   "contact": {
-    "title": "Contactez-moi",
-    "description": "Intéressé par une collaboration ? Connectons-nous !"
+    "title": "Contact",
+    "description": {
+      "get_in_touch": "Restons en contact !",
+      "connect": "Intéressé par une collaboration ? Connectons-nous !"
+    },
+    "email": "M'envoyer un email",
+    "linkedin": "LinkedIn"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Changer de langue",
+    "switchTo": "Passer en {{locale}}"
+  },
+  "header": {
+    "motion_toggle": {
+      "enabled": "Animations activées",
+      "disabled": "Animations désactivées"
+    }
   }
 }
