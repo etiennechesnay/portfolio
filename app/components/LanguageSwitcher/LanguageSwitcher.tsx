@@ -59,7 +59,7 @@ export default function LanguageSwitcher() {
   const CurrentFlag = FLAGS[currentLocale];
 
   return (
-    <div className="flex relative" ref={dropdownRef}>
+    <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="hover:scale-110 transition-transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-text rounded"
@@ -75,7 +75,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute left-1/2 -translate-x-1/2 mt-3">
+        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3">
           {/* Arrow pointing up */}
           <div
             className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-white rotate-45 shadow-lg"

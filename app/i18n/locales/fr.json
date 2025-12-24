@@ -42,7 +42,8 @@
       "connect": "Intéressé par une collaboration ? Connectons-nous !"
     },
     "email": "M'envoyer un email",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "languageSwitcher": {
     "changeLanguage": "Changer de langue",
