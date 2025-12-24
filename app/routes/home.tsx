@@ -1,10 +1,16 @@
 import { useRef } from "react";
+import type { MetaFunction } from "react-router";
 
 import ContactSection from "~/components/ContactSection";
 import Header from "~/components/Header";
 import PortfolioSection from "~/components/PortfolioSection";
 import SkillsSection from "~/components/SkillsSection";
 import WelcomeSection from "~/components/WelcomeSection";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const meta: MetaFunction = () => {
+  return [{ title: "Etienne Chesnay" }];
+};
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

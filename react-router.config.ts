@@ -1,11 +1,11 @@
 import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Configuration pour le SSR
-  ssr: true,
+  // Pre-rendering : génère le HTML de toutes les pages au build
+  prerender: ["/", "/es", "/fr"],
 
-  // Préfixe pour les routes d'API si nécessaire
-  // appDirectory: "app",
+  // SSR désactivé car on utilise le pre-rendering
+  ssr: false,
 
   // Configuration pour le build
   // buildDirectory: "build",

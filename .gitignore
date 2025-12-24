@@ -3,7 +3,7 @@
 
 # Others
 .git/
-**/.claude/
+.claude/
 **/node_modules/
 **/story-book-static
 
@@ -13,3 +13,19 @@
 **/storybook-static
 **/*.tsbuildinfo
 *.local
+
+# Build output
+build/
+.react-router/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production
