@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import type { MetaFunction } from "react-router";
 
 import ContactSection from "~/components/ContactSection";
@@ -13,6 +14,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Home() {
+  const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -24,7 +26,7 @@ export default function Home() {
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-primary-text focus:px-4 focus:py-2 focus:rounded"
       >
-        Skip to main content
+        {t("accessibility.skipToContent")}
       </a>
       <Header />
       <main id="main-content">

@@ -28,7 +28,7 @@ export default function ContactButton({
       href={href}
       target={isEmail ? undefined : "_blank"}
       rel={isEmail ? undefined : "noopener noreferrer"}
-      className={`flex items-center justify-center gap-3 px-8 py-4 ${buttonStyles[type]} focus:ring-2 focus:ring-white focus:outline-none text-white font-semibold rounded-lg transition-colors`}
+      className={`flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 ${buttonStyles[type]} focus:ring-2 focus:ring-white focus:outline-none text-white text-sm sm:text-base font-semibold rounded-lg transition-colors`}
       aria-label={ariaLabel}
     >
       {children}

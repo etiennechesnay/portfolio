@@ -54,5 +54,10 @@
       "enabled": "Animations activées",
       "disabled": "Animations désactivées"
     }
+  },
+  "accessibility": {
+    "skipToContent": "Passer au contenu principal",
+    "opensInNewWindow": "s'ouvre dans une nouvelle fenêtre",
+    "technology": "technologie"
   }
 }

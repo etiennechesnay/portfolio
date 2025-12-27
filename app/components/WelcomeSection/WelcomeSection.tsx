@@ -55,11 +55,11 @@ export default function WelcomeSection({
         )}
       >
         <div className="text-center">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-text mb-4 opacity-70">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-primary-text mb-2 sm:mb-4 opacity-70">
             {t("firstName")}{" "}
             <span className="text-primary-text">{t("lastName")}</span>
           </h1>
-          <p className="text-2xl md:text-4xl text-primary-text font-light opacity-90">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-primary-text font-light opacity-90">
             {t("jobTitle")}
           </p>
         </div>

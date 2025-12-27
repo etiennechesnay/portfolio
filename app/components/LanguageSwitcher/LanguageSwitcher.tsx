@@ -19,7 +19,9 @@ const FLAGS: Record<
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
+  const [alignRight, setAlignRight] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
@@ -56,6 +58,15 @@ export default function LanguageSwitcher() {
     };
   }, [isOpen]);
 
+  // Check if tooltip overflows viewport
+  useEffect(() => {
+    if (isOpen && tooltipRef.current) {
+      const rect = tooltipRef.current.getBoundingClientRect();
+      const overflowsRight = rect.right > window.innerWidth;
+      setAlignRight(overflowsRight);
+    }
+  }, [isOpen]);
+
   const CurrentFlag = FLAGS[currentLocale];
 
   return (
@@ -75,10 +86,17 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3">
+        <div
+          ref={tooltipRef}
+          className={`absolute top-full mt-3 ${
+            alignRight ? "right-0" : "left-1/2 -translate-x-1/2"
+          }`}
+        >
           {/* Arrow pointing up */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-white rotate-45 shadow-lg"
+            className={`absolute -top-2 w-4 h-4 bg-white rotate-45 shadow-lg ${
+              alignRight ? "right-3" : "left-1/2 -translate-x-1/2"
+            }`}
             aria-hidden="true"
           ></div>
           {/* Dropdown content */}
