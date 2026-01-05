@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import type { LinksFunction } from "react-router";
 import {
   Links,
   Meta,
@@ -14,6 +15,11 @@ import "./i18n/config";
 import LanguageHandler from "./components/LanguageHandler";
 import { MotionProvider } from "./contexts/MotionContext";
 import { getLocaleFromPathname } from "./i18n/utils";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const links: LinksFunction = () => [
+  { rel: "icon", type: "image/png", href: "/favicon.png" },
+];
 
 export default function Root() {
   const location = useLocation();

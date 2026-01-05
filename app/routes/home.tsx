@@ -7,10 +7,17 @@ import Header from "~/components/Header";
 import PortfolioSection from "~/components/PortfolioSection";
 import SkillsSection from "~/components/SkillsSection";
 import WelcomeSection from "~/components/WelcomeSection";
+import { getLocaleFromPathname, getTranslation } from "~/i18n/utils";
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const meta: MetaFunction = () => {
-  return [{ title: "Etienne Chesnay" }];
+export const meta: MetaFunction = ({ location }) => {
+  const locale = getLocaleFromPathname(location.pathname);
+  const description = getTranslation(locale, "seoDescription");
+
+  return [
+    { title: "Etienne Chesnay" },
+    { name: "description", content: description },
+  ];
 };
 
 export default function Home() {

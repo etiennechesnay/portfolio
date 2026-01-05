@@ -2,6 +2,7 @@
   "firstName": "Etienne",
   "lastName": "Chesnay",
   "jobTitle": "Ingénieur Front-End Senior",
+  "seoDescription": "Ingénieur Front-End Senior spécialisé en React, TypeScript et technologies web modernes. Portfolio d'Etienne Chesnay.",
   "about": {
     "title": "À Propos",
     "description": "Votre contenu à propos ira ici. Décrivez votre expérience, vos compétences et ce qui vous rend unique en tant qu'ingénieur front-end senior."
