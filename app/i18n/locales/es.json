@@ -20,6 +20,10 @@
       "title": "CanalPlus en TV",
       "description": "Adaptación y despliegue de la aplicación web Reactjs de myCanal en nuevos dispositivos: Playstation5, Samsung TV, LG TV y Hisense TV utilizando los frameworks y SDKs propietarios."
     },
+    "f1memo": {
+      "title": "F1 Memo",
+      "description": "Accede a datos de carrera en tiempo real con una interfaz inspirada en sistemas de telemetría profesionales. Visualiza sesiones, analiza rendimientos y explora cada detalle de las temporadas 2023, 2024 y 2025 de F1."
+    },
     "shadow": {
       "title": "Shadow",
       "description": "Dentro de la plataforma Core Business, trabajé en el desarrollo front-end de productos Shadow."

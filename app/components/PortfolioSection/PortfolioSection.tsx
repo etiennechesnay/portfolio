@@ -5,6 +5,7 @@ import CarouselFreeScroll from "../CarouselFreeScroll";
 
 import canalPlusImage from "~/assets/portfolio-cards/canalplus.png";
 import canalPlusTVImage from "~/assets/portfolio-cards/canalplus_tv.png";
+import f1memoImage from "~/assets/portfolio-cards/f1memo.png";
 import shadowImage from "~/assets/portfolio-cards/shadow.png";
 import stonalImage from "~/assets/portfolio-cards/stonal.png";
 import { useMotionPreference } from "~/contexts/MotionContext";
@@ -14,6 +15,19 @@ export default function PortfolioSection() {
   const { reduceMotion: shouldReduceMotion } = useMotionPreference();
 
   const projectsData = [
+    {
+      title: t("portfolio.f1memo.title"),
+      description: t("portfolio.f1memo.description"),
+      technologies: [
+        "React",
+        "Typescript",
+        "Tailwind CSS",
+        "React-Router",
+        "Vercel",
+      ],
+      image: f1memoImage,
+      href: "https://www.f1memo.com",
+    },
     {
       title: t("portfolio.canalplus.title"),
       description: t("portfolio.canalplus.description"),

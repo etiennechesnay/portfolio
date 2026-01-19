@@ -20,6 +20,10 @@
       "title": "CanalPlus on TV",
       "description": "Adaptation and deployment of myCanal's Reactjs webapp on new devices : Playstation5, Samsung TV, LG TV and Hisense TV using the proprietary frameworks and SDKs."
     },
+    "f1memo": {
+      "title": "F1 Memo",
+      "description": "Access real-time race data with an interface inspired by professional telemetry systems. Visualize sessions, analyze performance, and explore every detail of the 2023, 2024, and 2025 F1 seasons."
+    },
     "shadow": {
       "title": "Shadow",
       "description": "Within the Core Business Plateform, I worked on the front-end development of Shadow products."
