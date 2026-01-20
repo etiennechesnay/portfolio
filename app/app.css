@@ -25,4 +25,43 @@
 
   /* Gray shades */
   --color-gray-100: #f3f4f6;
+
+  /* Animation */
+  --animate-float: float 25s ease-in-out infinite;
+}
+
+/* Floating particles animation */
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0) translateX(0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px) translateX(-15px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translateY(-25px) translateX(5px);
+  }
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Sand grain texture effect */
+.sand-grain {
+  position: relative;
+}
+
+.sand-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.10;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }

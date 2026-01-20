@@ -28,11 +28,11 @@ export default function ProjectCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="block w-full h-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded-lg"
+      className="block w-full h-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded-2xl group"
       aria-label={`${title} - ${description} (${t("accessibility.opensInNewWindow")})`}
     >
       <motion.div
-        className="relative w-full h-64 sm:h-72 md:h-80 overflow-hidden rounded-lg shadow-lg"
+        className="relative w-full h-64 sm:h-72 md:h-80 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/20 group-hover:ring-white/40 transition-all duration-300 group-hover:shadow-[0_0_40px_rgba(76,192,251,0.3)]"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         onFocus={() => setIsHovered(true)}
@@ -52,11 +52,13 @@ export default function ProjectCard({
             alt={`${title} project screenshot`}
             className="w-full h-full object-cover"
           />
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         </motion.div>
 
-        {/* Details Container */}
+        {/* Details Container - Glassmorphism */}
         <motion.div
-          className="absolute inset-0 bg-primary-text p-4 sm:p-6 md:p-8 flex flex-col justify-center"
+          className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-4 sm:p-6 md:p-8 flex flex-col justify-center border-l border-white/20"
           initial={{ x: "100%" }}
           animate={{
             x: shouldReduceMotion ? "100%" : isHovered ? "0%" : "100%",
@@ -64,15 +66,18 @@ export default function ProjectCard({
           transition={{ duration: 0.5, ease: "easeInOut" }}
           aria-hidden={!isHovered}
         >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4">{title}</h3>
-          <p className="text-white/90 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base leading-relaxed">
+          {/* Inner glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-transparent to-purple-500/10 pointer-events-none" />
+
+          <h3 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4 drop-shadow-lg">{title}</h3>
+          <p className="relative text-white/90 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base leading-relaxed drop-shadow-md">
             {description}
           </p>
-          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+          <div className="relative flex flex-wrap gap-1.5 sm:gap-2">
             {technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/20 text-white text-xs sm:text-sm rounded-full"
+                className="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm rounded-full border border-white/20 shadow-inner"
               >
                 {tech}
               </span>

@@ -45,7 +45,7 @@ export default function WelcomeSection({
   }, [scrollY]);
 
   return (
-    <section className="relative w-full h-screen bg-primary-bg">
+    <section className="relative w-full h-screen bg-primary-bg sand-grain">
       {/* Texte qui passe de fixed à absolute quand Welcome arrive en bas */}
       <motion.div
         style={{ opacity: textOpacity }}
@@ -55,11 +55,12 @@ export default function WelcomeSection({
         )}
       >
         <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-primary-text mb-2 sm:mb-4 opacity-70">
-            {t("firstName")}{" "}
-            <span className="text-primary-text">{t("lastName")}</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light text-primary-text mb-3 sm:mb-5 tracking-tight">
+            <span className="font-semibold">
+              {t("firstName")} {t("lastName")}
+            </span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-primary-text font-light opacity-90">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-primary-text/70 font-medium uppercase tracking-[0.25em]">
             {t("jobTitle")}
           </p>
         </div>
