@@ -27,6 +27,7 @@ export default function Tooltip({
         return "right-full top-1/2 -translate-y-1/2 mr-3";
       case "right":
         return "left-full top-1/2 -translate-y-1/2 ml-3";
+      /* v8 ignore next - default unreachable with valid TypeScript enum */
       default:
         return "top-full left-1/2 -translate-x-1/2 mt-3";
     }

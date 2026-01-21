@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { useMotionPreference } from "~/contexts/MotionContext";
+import { seededRandom } from "~/utils/seededRandom";
 
 interface Particle {
   id: number;
@@ -15,14 +16,6 @@ interface Particle {
 interface FloatingParticlesProps {
   count?: number;
   color?: "blue" | "white";
-}
-
-// Seeded random number generator for deterministic particles
-function seededRandom(seed: number): () => number {
-  return () => {
-    seed = (seed * 9301 + 49297) % 233280;
-    return seed / 233280;
-  };
 }
 
 export default function FloatingParticles({

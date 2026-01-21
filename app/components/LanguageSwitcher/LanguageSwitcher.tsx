@@ -60,11 +60,13 @@ export default function LanguageSwitcher() {
 
   // Check if tooltip overflows viewport
   useEffect(() => {
+    /* v8 ignore start - getBoundingClientRect returns zeros in jsdom */
     if (isOpen && tooltipRef.current) {
       const rect = tooltipRef.current.getBoundingClientRect();
       const overflowsRight = rect.right > window.innerWidth;
       setAlignRight(overflowsRight);
     }
+    /* v8 ignore stop */
   }, [isOpen]);
 
   const CurrentFlag = FLAGS[currentLocale];

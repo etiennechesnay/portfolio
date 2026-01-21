@@ -33,10 +33,12 @@ export default function ProjectCard({
     >
       <motion.div
         className="relative w-full h-64 sm:h-72 md:h-80 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/20 group-hover:ring-white/40 transition-all duration-300 group-hover:shadow-[0_0_40px_rgba(76,192,251,0.3)]"
+        /* v8 ignore start - framer motion hover/focus handlers not triggerable via DOM events */
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         onFocus={() => setIsHovered(true)}
         onBlur={() => setIsHovered(false)}
+        /* v8 ignore stop */
         tabIndex={-1}
       >
         {/* Image Container */}

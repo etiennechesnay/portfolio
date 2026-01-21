@@ -35,10 +35,12 @@ export default function WelcomeSection({
   // Vérifier si le bas de la section Welcome est arrivé au niveau du texte
   useEffect(() => {
     const unsubscribe = scrollY.on("change", (latest) => {
+      /* v8 ignore start - framer motion scroll callback not triggerable in tests */
       if (typeof window !== "undefined") {
         // Quand scrollY atteint 40vh, on enlève le fixed
         setIsFixed(latest < window.innerHeight * 0.4);
       }
+      /* v8 ignore stop */
     });
 
     return () => unsubscribe();
