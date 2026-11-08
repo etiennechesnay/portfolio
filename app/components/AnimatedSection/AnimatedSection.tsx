@@ -16,17 +16,15 @@ export default function AnimatedSection({
 
   return (
     <motion.div
-      initial={
-        reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
-      }
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.8 }}
       transition={
         reduceMotion
           ? { duration: 0 }
           : {
               duration: 0.8,
-              delay: 0.5,
+              delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }
       }

@@ -52,6 +52,7 @@ export default function ProjectCard({
           <img
             src={image}
             alt={`${title} project screenshot`}
+            decoding="async"
             className="w-full h-full object-cover"
           />
           {/* Subtle gradient overlay for depth */}
@@ -71,7 +72,9 @@ export default function ProjectCard({
           {/* Inner glow effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-transparent to-purple-500/10 pointer-events-none" />
 
-          <h3 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4 drop-shadow-lg">{title}</h3>
+          <h3 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4 drop-shadow-lg">
+            {title}
+          </h3>
           <p className="relative text-white/90 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base leading-relaxed drop-shadow-md">
             {description}
           </p>
