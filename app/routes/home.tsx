@@ -7,6 +7,8 @@ import Header from "~/components/Header";
 import PortfolioSection from "~/components/PortfolioSection";
 import SkillsSection from "~/components/SkillsSection";
 import WelcomeSection from "~/components/WelcomeSection";
+import { useMotionPreference } from "~/contexts";
+import { useSectionScroll } from "~/hooks";
 import { getLocaleFromPathname, getTranslation } from "~/i18n/utils";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -23,6 +25,8 @@ export const meta: MetaFunction = ({ location }) => {
 export default function Home() {
   const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const { reduceMotion } = useMotionPreference();
+  useSectionScroll(scrollContainerRef, { enabled: !reduceMotion });
 
   return (
     <div

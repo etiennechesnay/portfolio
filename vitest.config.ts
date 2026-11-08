@@ -16,10 +16,12 @@ export default defineConfig({
         "app/i18n/utils.ts",
         "app/contexts/MotionContext.tsx",
         "app/components/**/*.tsx",
+        "app/hooks/**/*.ts",
         "app/utils/**/*.ts",
       ],
       exclude: [
         "app/components/**/index.ts",
+        "app/hooks/index.ts",
         "app/**/*.test.{ts,tsx}",
         "app/assets/**/*",
       ],
